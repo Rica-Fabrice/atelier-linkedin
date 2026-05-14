@@ -58,7 +58,7 @@ export function SiteFooter() {
               ].map(({ Icon, label }) => (
                 <a
                   key={label}
-                  href="#"
+                  href="/"
                   className="grid size-9 place-items-center rounded-full border border-border bg-secondary/50 text-foreground/80 transition-colors hover:bg-secondary hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/50"
                   aria-label={label}
                 >

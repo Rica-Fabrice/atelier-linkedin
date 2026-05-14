@@ -60,12 +60,3 @@ Pour lancer le projet localement :
    ```
 
 4. Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur pour voir le résultat.
-
-## Méthodologie UX/UI Appliquée
-
-Le design a été audité et perfectionné selon plusieurs lois d'UX :
-- **Loi de Hick** : Réduction des choix (CTAs) pour focaliser l'utilisateur sur la conversion principale.
-- **Loi de Miller** : Regroupement de la preuve sociale en 6 métriques clés pour limiter la charge cognitive.
-- **Effet Von Restorff** : Mise en évidence visuelle de la section "Leaderboards" pour renforcer l'autorité.
-- **Peak-End Rule** : Ajout d'animations gratifiantes en fin de parcours (compteur animé, halo lumineux sur le bouton final).
-

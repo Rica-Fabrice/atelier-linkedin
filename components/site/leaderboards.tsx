@@ -2,6 +2,7 @@
 
 import { AnimatedNumber } from "./animated-number"
 import { Reveal } from "./reveal"
+import Image from "next/image"
 import { Star, ArrowUpRight, Users, TrendingUp } from "lucide-react"
 
 export function Leaderboards() {
@@ -74,16 +75,18 @@ export function Leaderboards() {
           
           {/* Content Placeholder mimicking the screenshot */}
           <div className="aspect-[16/10] bg-[#F9FAFB] relative overflow-hidden">
-             <img 
+             <Image 
                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop" 
                className="object-cover w-full opacity-20 grayscale" 
-               alt="Dashboard Background" 
+               alt="Dashboard Background"
+               width={2426}
+               height={1617}
              />
              <div className="absolute inset-0 flex flex-col items-center justify-center p-4 sm:p-8">
                <div className="w-full max-w-3xl bg-white rounded-xl shadow-lg p-4 sm:p-6 border border-zinc-100 scale-90 sm:scale-100">
                   <div className="flex items-center gap-3 sm:gap-4 border-b border-zinc-100 pb-3 sm:pb-4 mb-3 sm:mb-4">
                     <div className="size-8 sm:size-12 rounded-full bg-zinc-200 overflow-hidden shrink-0">
-                       <img src="https://i.pravatar.cc/100?u=alexandre" alt="Alexandre" className="size-full object-cover" />
+                       <Image src="https://i.pravatar.cc/100?u=alexandre" alt="Alexandre" width={100} height={100} className="size-full object-cover" />
                     </div>
                     <div className="text-left min-w-0">
                       <div className="font-bold text-zinc-900 text-sm sm:text-base truncate">Alexandre Dupont</div>
@@ -106,7 +109,7 @@ export function Leaderboards() {
         </Reveal>
 
         <Reveal delay={0.5} className="mt-8 sm:mt-12">
-          <a href="#" className="inline-flex items-center gap-2 text-zinc-500 hover:text-foreground transition-colors text-xs sm:text-sm font-medium">
+          <a href="https://favikon.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-zinc-500 hover:text-foreground transition-colors text-xs sm:text-sm font-medium">
              <Star className="size-3 sm:size-4" />
              Voir le classement sur Favikon
              <ArrowUpRight className="size-3" />

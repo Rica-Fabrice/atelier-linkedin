@@ -15,13 +15,11 @@ type RevealProps = {
 
 export function Reveal({ children, className, delay = 0, y = 24, once = true, as = "div" }: RevealProps) {
   const variants: Variants = {
-    hidden: { opacity: 0, y, filter: "blur(6px)" },
+    hidden: { opacity: 0, y },
     show: {
       opacity: 1,
       y: 0,
-      filter: "blur(0px)",
       transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1], delay },
-      transitionEnd: { filter: "none" }
     },
   }
   const Comp = motion[as]
@@ -64,13 +62,11 @@ export function Stagger({
 
 export function StaggerItem({ children, className, y = 20 }: { children: ReactNode; className?: string; y?: number }) {
   const variants: Variants = {
-    hidden: { opacity: 0, y, filter: "blur(6px)" },
+    hidden: { opacity: 0, y },
     show: { 
       opacity: 1, 
       y: 0, 
-      filter: "blur(0px)", 
       transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
-      transitionEnd: { filter: "none" }
     },
   }
   return (

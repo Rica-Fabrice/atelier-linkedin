@@ -33,7 +33,7 @@ export function StickyMobileCTA() {
           className="fixed bottom-0 inset-x-0 z-50 p-3 sm:hidden"
         >
           <a
-            href="#candidater"
+            href="#formulaire-candidature"
             className="flex w-full items-center justify-center gap-2 rounded-2xl bg-foreground px-6 py-4 text-sm font-semibold text-background shadow-[0_-4px_30px_rgba(255,255,255,0.15)] active:scale-[0.98] transition-transform"
           >
             Candidater maintenant

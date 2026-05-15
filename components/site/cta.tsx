@@ -1,11 +1,11 @@
 "use client"
 
 import { Reveal } from "./reveal"
-import { ArrowRight } from "lucide-react"
+import { LeadForm } from "./lead-form"
 
 export function CTA() {
   return (
-    <section id="candidater" className="py-24 sm:py-32 relative overflow-hidden">
+    <section id="formulaire-candidature" className="py-24 sm:py-32 relative overflow-hidden">
       {/* Background grain & glow */}
       <div className="absolute inset-0 bg-background" />
       <div className="absolute inset-0 bg-grain" />
@@ -26,19 +26,8 @@ export function CTA() {
           </p>
         </Reveal>
 
-        <Reveal delay={0.2} className="mt-12 flex flex-col items-center justify-center gap-4">
-          <a
-            href="https://calendly.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex h-14 sm:h-16 w-full sm:w-auto items-center justify-center gap-3 rounded-full bg-foreground px-8 sm:px-10 text-base sm:text-lg font-medium text-background transition-transform hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_-15px_rgba(255,255,255,0.5)]"
-          >
-            Réserver mon appel stratégique
-            <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
-          </a>
-          <span className="text-sm text-muted-foreground mt-4">
-            Places limitées. Seulement 5 nouveaux accompagnements par mois.
-          </span>
+        <Reveal delay={0.2}>
+          <LeadForm />
         </Reveal>
       </div>
     </section>

@@ -5,7 +5,7 @@ import { Reveal, Stagger, StaggerItem } from "./reveal"
 
 export function Comparison() {
   return (
-    <section className="relative py-24 sm:py-32">
+    <section id="comparaison" className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal as="h2" className="serif text-balance text-center text-3xl leading-tight sm:text-4xl md:text-5xl lg:text-6xl">
           Ne rien faire <span className="italic-serif text-foreground/80">VS</span> Remplir ce formulaire.

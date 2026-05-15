@@ -1,7 +1,7 @@
 "use client"
 
 import { Reveal } from "./reveal"
-import { Play, ChevronDown } from "lucide-react"
+import * as LucideIcons from "lucide-react"
 import Image from "next/image"
 
 const podcasts = [
@@ -85,7 +85,7 @@ export function Podcasts() {
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
                      <div className="size-10 sm:size-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/30 group-hover/card:scale-110 transition-transform">
-                        <Play className="size-4 sm:size-5 text-foreground fill-white" />
+                        <LucideIcons.Play className="size-4 sm:size-5 text-foreground fill-white" />
                      </div>
                   </div>
                 </div>
@@ -105,7 +105,7 @@ export function Podcasts() {
         <Reveal delay={0.3} className="flex justify-center">
           <a href="#philosophie" className="inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-foreground transition-colors group">
             Découvrir ma philosophie
-            <ChevronDown className="size-4 group-hover:translate-y-0.5 transition-transform" />
+            <LucideIcons.ChevronDown className="size-4 group-hover:translate-y-0.5 transition-transform" />
           </a>
         </Reveal>
       </div>

@@ -35,7 +35,7 @@ export function SiteNav() {
           setActiveSection(`#${active.target.id}`)
         }
       },
-      { rootMargin: "-20% 0px -60% 0px", threshold: [0, 0.25, 0.5, 0.75, 1] }
+      { rootMargin: "-30% 0px -30% 0px", threshold: [0, 0.1, 0.5, 1] }
     )
 
     // Observe all sections that have IDs matching our links
@@ -91,7 +91,7 @@ export function SiteNav() {
 
         <div className="flex items-center gap-2">
           <a
-            href="#candidater"
+            href="#formulaire-candidature"
             className="hidden rounded-full bg-foreground px-4 py-1.5 text-sm font-medium text-background transition-transform hover:scale-[1.02] active:scale-[0.98] sm:inline-flex"
           >
             Candidater
@@ -130,7 +130,7 @@ export function SiteNav() {
               ))}
               <li>
                 <a
-                  href="#candidater"
+                  href="#formulaire-candidature"
                   onClick={() => setOpen(false)}
                   className="mt-1 block rounded-xl bg-foreground px-4 py-3 text-center text-sm font-medium text-background"
                 >

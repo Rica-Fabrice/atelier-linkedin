@@ -3,6 +3,13 @@
 import { Reveal, Stagger, StaggerItem } from "./reveal"
 import { Users, Building2, Send, Crown, Rocket, TrendingUp, Linkedin, Mic2, Megaphone, Video, Podcast, Calendar, ChevronDown } from "lucide-react"
 import Image from "next/image"
+import { RichText } from "@payloadcms/richtext-lexical/react"
+
+type AboutProps = {
+  approachTitle?: string
+  approachText?: Required<Parameters<typeof RichText>[0]>['data']
+  approachImageUrl?: string
+}
 
 const stats = [
   { icon: Users, text: <><strong className="text-foreground font-bold">+1 200 professionnels</strong> <span className="text-zinc-500 font-light">accompagnés en coaching, dont +100 dans ce programme d&apos;accélération.</span></> },
@@ -13,42 +20,42 @@ const stats = [
   { icon: TrendingUp, iconColor: "text-green-500", text: <><strong className="text-green-500 font-bold">100% de réussite</strong> <span className="text-zinc-500 font-light">pour ceux qui appliquent la méthode jusqu&apos;au bout.</span></> },
 ]
 
-export function About() {
+export function About({ approachTitle, approachText, approachImageUrl }: AboutProps) {
+  if (!approachTitle && !approachText) return null;
+
   return (
-    <section id="profil" className="bg-background py-24 sm:py-32 relative border-b border-white/5">
+    <section id="approche" className="bg-background py-24 sm:py-32 relative border-b border-white/5">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-start">
           
           {/* Left Column - Sticky Image */}
           <div className="lg:sticky lg:top-32 relative">
             <Reveal className="aspect-[4/3] sm:aspect-[4/5] relative rounded-2xl sm:rounded-3xl overflow-hidden border border-white/5 bg-zinc-900 shadow-2xl">
-              <Image 
-                src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1000&auto=format&fit=crop" 
-                alt="Alexandre Dupont" 
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
+              {approachImageUrl && (
+                <Image 
+                  src={approachImageUrl}
+                  alt={approachTitle || "Illustration"}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              )}
             </Reveal>
           </div>
 
           {/* Right Column - Scrolling Content */}
           <div className="flex flex-col pt-4">
-            <Reveal delay={0.1} className="text-[10px] font-bold tracking-[0.3em] text-zinc-600 uppercase mb-8">
-              Qui suis-je
-            </Reveal>
+            {approachTitle && (
+              <Reveal delay={0.1} className="text-[10px] font-bold tracking-[0.3em] text-zinc-600 uppercase mb-8">
+                {approachTitle}
+              </Reveal>
+            )}
             
-            <Reveal as="h2" delay={0.2} className="text-3xl sm:text-4xl md:text-5xl font-medium serif text-foreground leading-[1.05] mb-4 sm:mb-6">
-              Je m&apos;appelle <span className="italic-serif text-glow text-4xl sm:text-5xl md:text-7xl">Alexandre Dupont</span>
-            </Reveal>
-            
-            <Reveal delay={0.3} className="text-zinc-500 text-[13px] mb-8 font-light tracking-wide">
-              Sur LinkedIn depuis le 19 février 2019.
-            </Reveal>
-
-            <Reveal delay={0.4} className="text-foreground text-sm sm:text-[15px] md:text-base leading-relaxed font-light mb-12 sm:mb-20 max-w-lg">
-              En 7 ans, j&apos;ai testé tous les business models possibles sur LinkedIn : coaching, agence, influence, événements.
-            </Reveal>
+            {approachText && Object.keys(approachText).length > 0 && (
+              <Reveal as="div" delay={0.2} className="text-foreground text-sm sm:text-[15px] md:text-base leading-relaxed font-light mb-12 sm:mb-20 max-w-lg [&_h2]:text-3xl [&_h2]:sm:text-4xl [&_h2]:md:text-5xl [&_h2]:font-medium [&_h2]:serif [&_h2]:leading-[1.05] [&_h2]:mb-4 [&_h2]:sm:mb-6 [&_em]:italic-serif [&_em]:text-white [&_em]:[text-shadow:0_0_10px_rgba(255,255,255,0.6)] md:[&_em]:[text-shadow:0_0_20px_rgba(255,255,255,0.8)] [&_p]:mb-8">
+                <RichText data={approachText} />
+              </Reveal>
+            )}
 
             {/* Impact & Chiffres Clés */}
             <div className="mb-12 sm:mb-20">

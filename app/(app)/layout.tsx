@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { Inter, Playfair_Display } from "next/font/google"
-import "./globals.css"
+import "../globals.css"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="fr" className={`${inter.variable} ${playfair.variable} bg-background`}>
+    <html lang="fr" className={`${inter.variable} ${playfair.variable} bg-background scroll-smooth`}>
       <body className="font-sans antialiased bg-background text-foreground">
         {children}
       </body>

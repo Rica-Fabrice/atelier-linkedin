@@ -42,7 +42,7 @@ export function SiteFooter() {
 
             {/* Mini CTA */}
             <a
-              href="#candidater"
+              href="#formulaire-candidature"
               className="mt-6 inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium text-foreground transition-all hover:bg-secondary hover:border-foreground/20 group"
             >
               Prêt à commencer ?

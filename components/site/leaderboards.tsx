@@ -7,7 +7,7 @@ import { Star, ArrowUpRight, Users, TrendingUp } from "lucide-react"
 
 export function Leaderboards() {
   return (
-    <section className="bg-card/40 py-24 sm:py-32 relative overflow-hidden border-y border-border/50">
+    <section id="resultats" className="bg-card/40 py-24 sm:py-32 relative overflow-hidden border-y border-border/50">
       <div className="mx-auto max-w-5xl px-6 flex flex-col items-center text-center">
         
         <Reveal className="text-[11px] font-bold tracking-[0.2em] text-zinc-500 uppercase mb-6 sm:mb-8">

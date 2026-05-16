@@ -40,7 +40,7 @@ export function Philosophy({ philosophyTitle, philosophySubtitle, philosophyPoin
                 <h3 className="text-foreground font-semibold text-[15px] leading-snug mb-3">
                   {point.title}
                 </h3>
-                <p className="text-zinc-500 text-[13px] leading-relaxed">
+                <p className="text-zinc-400 text-[13px] leading-relaxed">
                   {point.description}
                 </p>
               </StaggerItem>

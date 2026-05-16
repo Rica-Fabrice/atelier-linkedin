@@ -47,7 +47,7 @@ export function Hero({ title, description, heroImageUrl }: HeroProps) {
 
         {/* Headline — dynamic or static fallback */}
         {title && Object.keys(title).length > 0 ? (
-          <Reveal as="div" delay={0.05} className="mt-6 sm:mt-8 max-w-4xl mx-auto text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-[1.1] serif font-medium tracking-tight text-foreground [&_em]:italic [&_em]:font-serif [&_em]:text-white [&_em]:[text-shadow:0_0_10px_rgba(255,255,255,0.6)] md:[&_em]:[text-shadow:0_0_20px_rgba(255,255,255,0.8)] [&_i]:italic [&_i]:font-serif [&_i]:text-white [&_i]:[text-shadow:0_0_10px_rgba(255,255,255,0.6)] md:[&_i]:[text-shadow:0_0_20px_rgba(255,255,255,0.8)]">
+          <Reveal as="div" delay={0.05} className="mt-6 sm:mt-8 max-w-4xl mx-auto text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-[1.1] serif font-medium tracking-tight text-foreground [&_em]:italic [&_em]:font-serif [&_em]:text-zinc-200 [&_em]:[text-shadow:0_0_10px_rgba(255,255,255,0.3)] md:[&_em]:[text-shadow:0_0_20px_rgba(255,255,255,0.5)] [&_i]:italic [&_i]:font-serif [&_i]:text-zinc-200 [&_i]:[text-shadow:0_0_10px_rgba(255,255,255,0.3)] md:[&_i]:[text-shadow:0_0_20px_rgba(255,255,255,0.5)]">
             <RichText data={title} />
           </Reveal>
         ) : (

@@ -95,7 +95,6 @@ export function SiteFooter() {
       <div className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-3 px-6 py-6 text-[11px] text-muted-foreground sm:flex-row sm:items-center">
           <p>© {new Date().getFullYear()} Atelier LinkedIn - Tous droits réservés.</p>
-          <p>Conçu avec soin à Paris.</p>
         </div>
       </div>
     </footer>

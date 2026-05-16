@@ -12,12 +12,12 @@ type AboutProps = {
 }
 
 const stats = [
-  { icon: Users, text: <><strong className="text-foreground font-bold">+1 200 professionnels</strong> <span className="text-zinc-500 font-light">accompagnés en coaching, dont +100 dans ce programme d&apos;accélération.</span></> },
-  { icon: Building2, text: <><strong className="text-foreground font-bold">+100 entreprises</strong> <span className="text-zinc-500 font-light">accompagnées</span><br/><span className="text-[11px] text-zinc-600 font-light">Back Market, Amazon, Century21, Aircall, Unilever</span></> },
-  { icon: Linkedin, text: <><strong className="text-foreground font-bold">+110 000 abonnés</strong> <span className="text-zinc-500 font-light">sur LinkedIn et plus de 100 millions d&apos;impressions cumulées.</span></> },
-  { icon: Crown, text: <><strong className="text-foreground font-bold">Coaching & Influence</strong> <span className="text-zinc-500 font-light">auprès de dirigeants et personnalités publiques</span><br/><span className="text-[11px] text-zinc-600 font-light">Gaël Monfils, Mamadou Sakho, Julien Lepers, José Garcia</span></> },
-  { icon: Mic2, text: <><strong className="text-foreground font-bold">+100 conférences</strong> <span className="text-zinc-500 font-light">données et 2 événements majeurs organisés (La Cigale & Ground Control - 2500 pers).</span></> },
-  { icon: TrendingUp, iconColor: "text-green-500", text: <><strong className="text-green-500 font-bold">100% de réussite</strong> <span className="text-zinc-500 font-light">pour ceux qui appliquent la méthode jusqu&apos;au bout.</span></> },
+  { icon: Users, text: <><strong className="text-foreground font-bold">+1 200 professionnels</strong> <span className="text-zinc-400 font-light">accompagnés en coaching, dont +100 dans ce programme d&apos;accélération.</span></> },
+  { icon: Building2, text: <><strong className="text-foreground font-bold">+100 entreprises</strong> <span className="text-zinc-400 font-light">accompagnées</span><br/><span className="text-[11px] text-zinc-500 font-light">Back Market, Amazon, Century21, Aircall, Unilever</span></> },
+  { icon: Linkedin, text: <><strong className="text-foreground font-bold">+110 000 abonnés</strong> <span className="text-zinc-400 font-light">sur LinkedIn et plus de 100 millions d&apos;impressions cumulées.</span></> },
+  { icon: Crown, text: <><strong className="text-foreground font-bold">Coaching & Influence</strong> <span className="text-zinc-400 font-light">auprès de dirigeants et personnalités publiques</span><br/><span className="text-[11px] text-zinc-500 font-light">Gaël Monfils, Mamadou Sakho, Julien Lepers, José Garcia</span></> },
+  { icon: Mic2, text: <><strong className="text-foreground font-bold">+100 conférences</strong> <span className="text-zinc-400 font-light">données et 2 événements majeurs organisés (La Cigale & Ground Control - 2500 pers).</span></> },
+  { icon: TrendingUp, iconColor: "text-green-500/80", text: <><strong className="text-green-500/80 font-bold">100% de réussite</strong> <span className="text-zinc-400 font-light">pour ceux qui appliquent la méthode jusqu&apos;au bout.</span></> },
 ]
 
 export function About({ approachTitle, approachText, approachImageUrl }: AboutProps) {
@@ -52,7 +52,7 @@ export function About({ approachTitle, approachText, approachImageUrl }: AboutPr
             )}
             
             {approachText && Object.keys(approachText).length > 0 && (
-              <Reveal as="div" delay={0.2} className="text-foreground text-sm sm:text-[15px] md:text-base leading-relaxed font-light mb-12 sm:mb-20 max-w-lg [&_h2]:text-3xl [&_h2]:sm:text-4xl [&_h2]:md:text-5xl [&_h2]:font-medium [&_h2]:serif [&_h2]:leading-[1.05] [&_h2]:mb-4 [&_h2]:sm:mb-6 [&_em]:italic-serif [&_em]:text-white [&_em]:[text-shadow:0_0_10px_rgba(255,255,255,0.6)] md:[&_em]:[text-shadow:0_0_20px_rgba(255,255,255,0.8)] [&_p]:mb-8">
+              <Reveal as="div" delay={0.2} className="text-foreground text-sm sm:text-[15px] md:text-base leading-relaxed font-light mb-12 sm:mb-20 max-w-lg [&_h2]:text-3xl [&_h2]:sm:text-4xl [&_h2]:md:text-5xl [&_h2]:font-medium [&_h2]:serif [&_h2]:leading-[1.05] [&_h2]:mb-4 [&_h2]:sm:mb-6 [&_em]:italic-serif [&_em]:text-zinc-200 [&_em]:[text-shadow:0_0_10px_rgba(255,255,255,0.4)] md:[&_em]:[text-shadow:0_0_20px_rgba(255,255,255,0.5)] [&_p]:mb-8">
                 <RichText data={approachText} />
               </Reveal>
             )}

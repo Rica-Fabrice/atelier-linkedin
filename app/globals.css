@@ -4,24 +4,24 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Premium Off-Black / Off-White palette */
-  --background: oklch(0.07 0.005 285);
-  --foreground: oklch(0.98 0 0);
-  --card: oklch(0.11 0.005 285);
-  --card-foreground: oklch(0.98 0 0);
-  --popover: oklch(0.11 0.005 285);
-  --popover-foreground: oklch(0.98 0 0);
-  --primary: oklch(0.98 0 0);
-  --primary-foreground: oklch(0.07 0.005 285);
-  --secondary: oklch(0.14 0.005 285);
-  --secondary-foreground: oklch(0.98 0 0);
-  --muted: oklch(0.14 0.005 285);
-  --muted-foreground: oklch(0.55 0 0);
+  /* Soft Premium Palette (Zinc 950 / Zinc 200) */
+  --background: oklch(0.12 0.005 285); /* #0A0A0C equivalent */
+  --foreground: oklch(0.85 0 0);      /* Zinc 200 */
+  --card: oklch(0.14 0.005 285);
+  --card-foreground: oklch(0.85 0 0);
+  --popover: oklch(0.14 0.005 285);
+  --popover-foreground: oklch(0.85 0 0);
+  --primary: oklch(0.85 0 0);
+  --primary-foreground: oklch(0.12 0.005 285);
+  --secondary: oklch(0.16 0.005 285);
+  --secondary-foreground: oklch(0.85 0 0);
+  --muted: oklch(0.16 0.005 285);
+  --muted-foreground: oklch(0.65 0 0); /* Zinc 400 */
   /* Subdued text */
-  --accent: oklch(0.18 0.005 285);
-  --accent-foreground: oklch(0.98 0 0);
-  --border: oklch(0.18 0.005 285);
-  --input: oklch(0.18 0.005 285);
+  --accent: oklch(0.20 0.005 285);
+  --accent-foreground: oklch(0.85 0 0);
+  --border: oklch(0.20 0.005 285);
+  --input: oklch(0.20 0.005 285);
   --ring: oklch(0.32 0 0);
 
   --radius: 0.5rem;
@@ -96,7 +96,7 @@
 
 /* Stunning white glow for specific text elements like LinkedIn™ */
 .text-glow {
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.4), 0 0 80px rgba(255, 255, 255, 0.2);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.2);
   display: inline-block;
   padding: 40px;
   margin: -40px;

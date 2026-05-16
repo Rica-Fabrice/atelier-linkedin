@@ -1,6 +1,8 @@
 import { getPayload } from 'payload'
 import config from '@payload-config'
 
+export const revalidate = 3600; // Fallback revalidation every hour
+
 import { SiteNav } from "@/components/site/nav"
 import { Hero } from "@/components/site/hero"
 import { SocialProof } from "@/components/site/social-proof"

@@ -1,10 +1,18 @@
 import type { GlobalConfig } from 'payload'
+import { revalidatePath } from 'next/cache'
 
 export const HomePage: GlobalConfig = {
   slug: 'home-page',
   label: 'Page d\'accueil',
   admin: {
     description: 'Contenu dynamique de la page d\'accueil du site.',
+  },
+  hooks: {
+    afterChange: [
+      () => {
+        revalidatePath('/')
+      },
+    ],
   },
   fields: [
     {

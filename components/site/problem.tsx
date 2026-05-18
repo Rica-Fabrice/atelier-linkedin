@@ -18,7 +18,7 @@ const points = [
 
 export function Problem() {
   return (
-    <section id="probleme" className="bg-background py-24 sm:py-32 relative border-b border-white/5">
+    <section id="probleme" className="bg-white/[0.02] py-24 sm:py-32 relative border-b border-white/[0.05]">
       <div className="mx-auto max-w-3xl px-6">
         
         <Reveal as="h2" className="text-center text-3xl sm:text-4xl md:text-5xl font-medium serif text-foreground mb-10 sm:mb-16">

@@ -7,6 +7,7 @@ import { SiteNav } from "@/components/site/nav"
 import { Hero } from "@/components/site/hero"
 import { SocialProof } from "@/components/site/social-proof"
 import { Problem } from "@/components/site/problem"
+import { FunnelSection } from "@/components/site/funnel-section"
 import { About } from "@/components/site/about"
 import { Leaderboards } from "@/components/site/leaderboards"
 import { Podcasts } from "@/components/site/podcasts"
@@ -84,6 +85,7 @@ export default async function Home() {
       />
       <SocialProof />
       <Problem />
+      <FunnelSection />
       <About 
         approachTitle={homeData.approachTitle}
         approachText={homeData.approachText}

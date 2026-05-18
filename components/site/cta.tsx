@@ -5,7 +5,7 @@ import { LeadForm } from "./lead-form"
 
 export function CTA() {
   return (
-    <section id="formulaire-candidature" className="py-24 sm:py-32 relative overflow-hidden">
+    <section id="formulaire-candidature" className="bg-background py-24 sm:py-32 relative overflow-hidden border-b border-white/[0.05]">
       {/* Background grain & glow */}
       <div className="absolute inset-0 bg-background" />
       <div className="absolute inset-0 bg-grain" />

@@ -17,7 +17,7 @@ export function Philosophy({ philosophyTitle, philosophySubtitle, philosophyPoin
   };
 
   return (
-    <section id="philosophie" className="bg-background py-24 sm:py-32 border-t border-white/5">
+    <section id="philosophie" className="bg-white/[0.02] py-24 sm:py-32 border-b border-white/[0.05]">
       <div className="mx-auto max-w-5xl px-6">
         
         <div className="mb-20">
@@ -32,8 +32,8 @@ export function Philosophy({ philosophyTitle, philosophySubtitle, philosophyPoin
         {philosophyPoints && philosophyPoints.length > 0 && (
           <Stagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-16">
             {philosophyPoints.map((point, i) => (
-              <StaggerItem key={i} className="flex flex-col p-4 sm:p-6 rounded-2xl bg-zinc-900/40 border border-white/10 hover:bg-white/5 transition-colors duration-300">
-                <div className="flex-none bg-background rounded-lg p-2 border border-white/5 w-fit mb-4 sm:mb-6">
+              <StaggerItem key={i} className="flex flex-col p-4 sm:p-6 rounded-2xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-sm hover:bg-white/[0.05] transition-colors duration-300">
+                <div className="flex-none bg-background rounded-lg p-2 border border-white/[0.05] w-fit mb-4 sm:mb-6">
                   {renderIcon(point.icon)}
                 </div>
                 <div className="text-[10px] text-zinc-600 font-mono mb-2 uppercase tracking-widest">0{i+1}</div>

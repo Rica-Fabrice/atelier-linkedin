@@ -34,7 +34,7 @@ const podcasts = [
 
 export function Podcasts() {
   return (
-    <section id="podcasts" className="bg-background py-16 sm:py-24 border-t border-white/5 overflow-hidden">
+    <section id="podcasts" className="bg-background py-16 sm:py-24 border-b border-white/[0.05] overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 mb-10">
         <div className="text-center">
           <Reveal className="text-[11px] font-bold tracking-[0.2em] text-zinc-500 uppercase mb-4">

@@ -7,8 +7,12 @@ import { Star, ArrowUpRight, Users, TrendingUp } from "lucide-react"
 
 export function Leaderboards() {
   return (
-    <section id="resultats" className="bg-card/40 py-24 sm:py-32 relative overflow-hidden border-y border-border/50">
-      <div className="mx-auto max-w-5xl px-6 flex flex-col items-center text-center">
+    <section id="resultats" className="bg-white/[0.02] py-24 sm:py-32 relative overflow-hidden border-b border-white/[0.05]">
+      {/* Premium radial glow */}
+      <div className="absolute left-1/2 top-0 -z-10 h-[500px] w-[800px] -translate-x-1/2 opacity-30 pointer-events-none"
+        style={{ background: "radial-gradient(circle at top, color-mix(in oklch, var(--foreground) 10%, transparent) 0%, transparent 70%)" }}
+      />
+      <div className="mx-auto max-w-5xl px-6 flex flex-col items-center text-center relative z-10">
         
         <Reveal className="text-[11px] font-bold tracking-[0.2em] text-zinc-500 uppercase mb-6 sm:mb-8">
           Classement officiel Favikon

@@ -22,7 +22,7 @@ const footerLinks = {
 
 export function SiteFooter() {
   return (
-    <footer className="relative border-t border-border">
+    <footer className="bg-background relative border-t border-white/[0.05]">
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-5">
 

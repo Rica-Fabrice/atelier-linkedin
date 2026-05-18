@@ -27,7 +27,7 @@ export function Program({ programTitle, programModules }: ProgramProps) {
   }));
 
   return (
-    <section id="programme" className="py-24 sm:py-32 bg-background">
+    <section id="programme" className="bg-white/[0.02] py-24 sm:py-32 border-b border-white/[0.05]">
       <div className="mx-auto max-w-5xl px-6">
         <Reveal className="text-center">
           <span className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
@@ -45,7 +45,7 @@ export function Program({ programTitle, programModules }: ProgramProps) {
             <Reveal
               key={i}
               delay={0.1 + i * 0.05}
-              className={`group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-border bg-card/30 p-5 sm:p-8 transition-colors hover:bg-card flex flex-col justify-between ${mod.span}`}
+              className={`group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-5 sm:p-8 transition-colors hover:bg-white/[0.05] flex flex-col justify-between ${mod.span}`}
             >
               <div className="mb-3 sm:mb-4 inline-flex size-9 sm:size-10 items-center justify-center rounded-lg sm:rounded-xl bg-secondary">
                 {renderIcon(mod.icon, i)}

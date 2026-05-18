@@ -24,7 +24,7 @@ export function About({ approachTitle, approachText, approachImageUrl }: AboutPr
   if (!approachTitle && !approachText) return null;
 
   return (
-    <section id="approche" className="bg-background py-24 sm:py-32 relative border-b border-white/5">
+    <section id="approche" className="bg-background py-24 sm:py-32 relative border-b border-white/[0.05]">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-start">
           

@@ -43,7 +43,7 @@ export function FAQ() {
   ]
 
   return (
-    <section className="py-24 sm:py-32">
+    <section className="bg-white/[0.02] py-24 sm:py-32 border-b border-white/[0.05]">
       <div className="mx-auto max-w-3xl px-6">
         <Reveal className="text-center mb-16">
           <h2 className="text-3xl sm:text-5xl text-balance">
@@ -56,7 +56,7 @@ export function FAQ() {
           {faqs.map((faq, i) => (
             <Reveal key={i} delay={0.05 + i * 0.05}>
               <div 
-                className={`rounded-2xl border transition-colors duration-300 ${openIndex === i ? 'border-foreground/30 bg-secondary/20' : 'border-border bg-card/10 hover:bg-card/40'}`}
+                className={`rounded-2xl border transition-colors duration-300 backdrop-blur-sm ${openIndex === i ? 'border-white/[0.15] bg-white/[0.05]' : 'border-white/[0.08] bg-white/[0.03] hover:bg-white/[0.05]'}`}
               >
                 <button
                   className="flex w-full items-center justify-between px-6 py-5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-2xl"
@@ -79,7 +79,7 @@ export function FAQ() {
 
         {/* Contact fallback */}
         <Reveal delay={0.5} className="mt-12 text-center">
-          <div className="rounded-2xl border border-border bg-card/20 p-6 sm:p-8">
+          <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm p-6 sm:p-8">
             <p className="text-muted-foreground text-sm mb-4">
               Tu n&apos;as pas trouvé ta réponse ?
             </p>

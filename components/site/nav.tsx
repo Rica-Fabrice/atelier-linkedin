@@ -60,12 +60,12 @@ export function SiteNav() {
         data-scrolled={scrolled}
         className="flex w-full max-w-5xl items-center justify-between rounded-full border border-border/60 bg-background/60 px-4 py-2 shadow-[0_1px_0_0_rgba(255,255,255,0.04)_inset] backdrop-blur-xl sm:px-5"
       >
-        <a href="#top" className="flex items-center gap-2">
-          <span className="grid size-7 place-items-center rounded-full bg-foreground text-[11px] font-semibold tracking-tight text-background">
-            AT
+        <a href="#top" className="flex items-center gap-3">
+          <span className="w-8 h-8 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center text-xs text-zinc-300 font-medium shrink-0">
+            AD
           </span>
-          <span className="serif text-base text-foreground/90">
-            Atelier <span className="italic-serif text-foreground/70">LinkedIn</span>
+          <span className="font-serif text-zinc-100 text-base tracking-tight">
+            Alexandre Dupont
           </span>
         </a>
 

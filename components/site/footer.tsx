@@ -28,12 +28,12 @@ export function SiteFooter() {
 
           {/* Brand column - spans 2 cols on lg */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2">
-              <span className="grid size-7 place-items-center rounded-full bg-foreground text-[11px] font-semibold tracking-tight text-background">
-                AT
+            <div className="flex items-center gap-3">
+              <span className="w-8 h-8 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center text-xs text-zinc-300 font-medium shrink-0">
+                AD
               </span>
-              <span className="serif text-base text-foreground/90">
-                Atelier <span className="italic-serif text-foreground/70">LinkedIn</span>
+              <span className="font-serif text-zinc-100 text-base tracking-tight">
+                Alexandre Dupont
               </span>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">

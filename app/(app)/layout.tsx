@@ -15,9 +15,12 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: "Atelier LinkedIn - Programme d'accélération",
+  title: {
+    template: "%s | Accélération Commerciale",
+    default: "Acquisition & Vente B2B | Le Programme",
+  },
   description:
-    "Un accompagnement individuel sur 6 mois pour transformer ton profil LinkedIn en machine à clients. Zéro prospection. 100% contenu.",
+    "La mécanique de précision pour attirer des prospects qualifiés et structurer vos cycles de vente B2B.",
 }
 
 export const viewport = {

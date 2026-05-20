@@ -13,8 +13,22 @@ import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { Leads } from './collections/Leads'
 import { HomePage } from './globals/HomePage'
+import { Settings } from './globals/Settings'
+import { nodemailerAdapter } from '@payloadcms/email-nodemailer'
 
 export default buildConfig({
+  email: nodemailerAdapter({
+    defaultFromAddress: process.env.EMAIL_SENDER_ADDRESS || 'noreply@votredomaine.com',
+    defaultFromName: process.env.EMAIL_SENDER_NAME || 'Payload CMS',
+    transportOptions: {
+      host: process.env.SMTP_HOST,
+      port: process.env.SMTP_PORT ? parseInt(process.env.SMTP_PORT, 10) : 587,
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    },
+  }),
   // ---------------------------------------------------------------------------
   // Admin
   // ---------------------------------------------------------------------------
@@ -29,7 +43,7 @@ export default buildConfig({
   // Collections & Globals
   // ---------------------------------------------------------------------------
   collections: [Users, Media, Leads],
-  globals: [HomePage],
+  globals: [HomePage, Settings],
 
   // ---------------------------------------------------------------------------
   // Database — Supabase PostgreSQL (Transaction Pooler)
@@ -37,6 +51,8 @@ export default buildConfig({
   db: postgresAdapter({
     pool: {
       connectionString: process.env.DATABASE_URI!,
+      max: 10,
+      connectionTimeoutMillis: 10000,
     },
   }),
 

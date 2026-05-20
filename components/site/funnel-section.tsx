@@ -66,7 +66,7 @@ export function FunnelSection({ funnelTitle, funnelSubtitle, funnelSteps }: Funn
     : defaultSteps;
 
   const renderIcon = (iconName: string) => {
-    const Icon = (LucideIcons as Record<string, LucideIcons.LucideIcon>)[iconName];
+    const Icon = (LucideIcons as any)[iconName];
     return Icon ? <Icon className="size-4 text-zinc-400" /> : <LucideIcons.Sparkles className="size-4 text-zinc-400" />;
   };
 

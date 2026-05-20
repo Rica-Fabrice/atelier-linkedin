@@ -1,8 +1,9 @@
 "use client"
 
 import { useActionState } from "react"
-import { submitLead } from "@/app/actions/submitLead"
 import { ArrowRight, CheckCircle2, Loader2 } from "lucide-react"
+
+import { submitLead } from "@/app/actions/submitLead"
 
 export function LeadForm() {
   const [state, formAction, isPending] = useActionState(submitLead, null)
@@ -21,6 +22,15 @@ export function LeadForm() {
 
   return (
     <form action={formAction} className="mt-12 w-full max-w-md mx-auto flex flex-col gap-4 text-left">
+      <input
+        type="text"
+        name="_alt_email_validation"
+        aria-hidden="true"
+        tabIndex={-1}
+        autoComplete="off"
+        className="absolute w-0 h-0 opacity-0 -z-10 pointer-events-none"
+      />
+
       <div className="flex flex-col gap-1.5">
         <label htmlFor="name" className="text-sm font-medium text-foreground/80 pl-1">
           Nom complet
@@ -49,6 +59,11 @@ export function LeadForm() {
           className="h-12 w-full rounded-xl border border-white/10 bg-zinc-900/50 px-4 text-sm text-foreground placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-foreground/50 transition-all disabled:opacity-50"
           placeholder="alexandre@exemple.com"
         />
+        {state?.emailError && (
+          <span className="text-red-500 text-sm mt-1 pl-1">
+            {state.error}
+          </span>
+        )}
       </div>
 
       <div className="flex flex-col gap-1.5">
@@ -65,7 +80,7 @@ export function LeadForm() {
         />
       </div>
 
-      {state?.error && (
+      {state?.error && !state?.emailError && (
         <p className="text-red-400 text-sm text-center bg-red-400/10 py-2 rounded-lg border border-red-400/20">
           {state.error}
         </p>

@@ -16,7 +16,7 @@ export function Program({ programTitle, programModules }: ProgramProps) {
 
   const renderIcon = (iconName?: string, index: number = 0) => {
     const name = iconName || defaultIcons[index % defaultIcons.length];
-    const Icon = (LucideIcons as Record<string, LucideIcons.LucideIcon>)[name];
+    const Icon = (LucideIcons as any)[name];
     return Icon ? <Icon className="size-5 text-foreground" /> : <LucideIcons.Sparkles className="size-5 text-foreground" />;
   };
 

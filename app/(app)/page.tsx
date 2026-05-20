@@ -1,5 +1,6 @@
 import { getPayload } from 'payload'
 import config from '@payload-config'
+import { RichText } from '@payloadcms/richtext-lexical/react'
 
 export const revalidate = 3600; // Fallback revalidation every hour
 
@@ -19,7 +20,6 @@ import { FAQ } from "@/components/site/faq"
 import { CTA } from "@/components/site/cta"
 import { SiteFooter } from "@/components/site/footer"
 import { StickyMobileCTA } from "@/components/site/sticky-cta"
-import { RichText } from '@payloadcms/richtext-lexical/react'
 
 type LexicalRichTextData = Required<Parameters<typeof RichText>[0]>['data']
 
@@ -31,12 +31,12 @@ interface HomeData {
   approachText?: LexicalRichTextData
   approachImageUrl?: string
   programTitle?: string
-  programModules?: unknown[]
+  programModules?: any[]
   alumniTitle?: string
-  alumniTestimonials?: unknown[]
+  alumniTestimonials?: any[]
   philosophyTitle?: string
   philosophySubtitle?: string
-  philosophyPoints?: unknown[]
+  philosophyPoints?: any[]
 }
 
 export default async function Home() {

@@ -12,7 +12,7 @@ export function Philosophy({ philosophyTitle, philosophySubtitle, philosophyPoin
 
   const renderIcon = (iconName?: string) => {
     if (!iconName) return <LucideIcons.Sparkles className="size-5 text-zinc-500" />;
-    const Icon = (LucideIcons as Record<string, LucideIcons.LucideIcon>)[iconName];
+    const Icon = (LucideIcons as any)[iconName];
     return Icon ? <Icon className="size-5 text-zinc-500" /> : <LucideIcons.Sparkles className="size-5 text-zinc-500" />;
   };
 

@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: atelier-linkedin-web:latest
+    container_name: atelier-linkedin-web
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
